@@ -1,0 +1,37 @@
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+ 
+int A(char *arg)
+{
+    printf("A\n");
+    return !strcmp(arg, "TRUE");
+}
+ 
+int B(char *arg)
+{
+    printf("B\n");
+    return !strcmp(arg, "TRUE");
+}
+ 
+int C(char *arg)
+{
+    printf("C\n");
+    return !strcmp(arg, "TRUE");
+}
+ 
+int D(char *arg)
+{
+    printf("D\n");
+    return !strcmp(arg, "TRUE");
+}
+ 
+ 
+int main(int argc, char **argv)
+{
+    if ((A(argv[1]) || B(argv[2])) &amp;&amp; (C(argv[3]) || D(argv[4]))) {
+        printf("TRUE\n");
+    } else {
+        printf("FALSE\n");
+    }
+    return 0;
+}
